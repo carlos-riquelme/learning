@@ -2,7 +2,7 @@ var elixir = require('laravel-elixir');
 
 
 elixir(function(mix) {
-    mix.sass('app.sgulpcss')
+    mix.sass('app.scss')
 
         .styles([
             'libs/blog-post.css',
@@ -15,7 +15,7 @@ elixir(function(mix) {
 
 
         .scripts([
-            'libs/bottstrap.js',
+            'libs/bootstrap.js',
             'libs/jquery.js',
             'libs/metisMenu.js',
             'libs/sb-admin-2.js',
