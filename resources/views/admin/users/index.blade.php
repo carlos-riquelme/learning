@@ -13,7 +13,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Rol</th>
-                <th>Activo</th>
+                <th>Estado</th>
                 <th>Fecha de registro</th>
             </tr>
         </thead>
