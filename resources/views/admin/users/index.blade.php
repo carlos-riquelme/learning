@@ -22,8 +22,6 @@
     
     <h1>Usuarios</h1>
 
-    <table></table>
-    
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
