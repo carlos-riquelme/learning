@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Requests\PostsCreateRequest;
 use App\Photo;
-use App\Category;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -139,5 +139,15 @@ class AdminPostsController extends Controller
         $post->delete();
 
         return redirect('/admin/posts');
+    }
+
+    public function post($id){
+
+        $post = Post::findOrFail($id);
+
+        $comments = $post->comments()->whereIsActive(1)->get();
+
+        return view('post', compact('post','comments'));
+
     }
 }

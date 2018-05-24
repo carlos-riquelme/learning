@@ -3,7 +3,7 @@
 @section('content')
 
 
-@if(count($comments) > 0)
+@if($comments)
 
 
 <h1>Comentarios</h1>
@@ -19,13 +19,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($comments as $comment)
                 <tr>
                     <td>{{$comment->id}}</td>
                     <td>{{$comment->author}}</td>
                     <td>{{$comment->email}}</td>
                     <td>{{$comment->body}}</td>
-                    <td><a href="{{route('home.post', $comment->post->id)}}">View Post</a></td>
+                    <td><a href="{{route('home.post',$comment->post->id)}}">View Post</a></td>
                     <td>
                         @if($comment->is_active == 1)
                             
@@ -78,15 +77,17 @@
                     </td>
                 </tr>
 
-                @endforeach
+                
 
             </tbody>
         </table>
 
-@else
+@endif
+
+{{--  @else  --}}
 
 <h1 class="text-center">Sin Comentarios</h1>
 
-@endif
+
 
 @stop

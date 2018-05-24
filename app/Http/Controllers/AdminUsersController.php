@@ -10,6 +10,7 @@ use App\User;
 use App\Post;
 use App\Role;
 use App\Photo;
+use App\Comment;
 
 use App\Http\Requests;
 
